@@ -98,7 +98,8 @@ while opcion != 6:
         continue
 
     # ================================
-    #   FASE 3 – PARTE DE JOHN
+    #   FASE 3 –  OPERACIONES: CONSULTAR / DEPOSITAR / RETIRAR
+        JOHN
     # ================================
 
     # 1. Consultar saldo
