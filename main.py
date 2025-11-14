@@ -1,5 +1,4 @@
 import sys
-
 # ============================================
 #   CAJERO AUTOMÁTICO - USUARIOS
 #   Yohel
