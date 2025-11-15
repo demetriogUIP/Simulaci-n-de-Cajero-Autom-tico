@@ -34,31 +34,30 @@ Esta sección implementa el sistema de seguridad y la estructura de datos que pe
 
 ---
 
-Funcionalidad desarrollada por el Integrante 3 (John Roa)
+## Funcionalidad desarrollada por el Integrante 3 (John)
 
-Esta sección implementa las operaciones principales del cajero automático, trabajando sobre el usuario actualmente autenticado y actualizando sus datos dentro del sistema.
+Esta sección corresponde a la implementación de las funciones principales del cajero relacionadas con la gestión del dinero y el saldo del usuario.
 
-Estructura implementada:
+### Funcionalidades implementadas:
 
-Consulta de saldo:
-Muestra el saldo actual disponible para el usuario activo.
+* **Consultar saldo:** Muestra el saldo actual de la cuenta del usuario activo.
+* **Depositar dinero:** Permite ingresar un monto válido, suma dicho monto al saldo y registra el movimiento en el historial.
+* **Retirar dinero:** Permite retirar un monto válido. El sistema verifica que el usuario tenga fondos suficientes y registra el movimiento en el historial.
 
-Depósito de dinero:
-Validación del monto ingresado, actualización del saldo mediante variable acumulativa y registro del movimiento en el historial.
+### Validaciones aplicadas:
 
-Retiro de dinero:
-Validación del monto, verificación de fondos suficientes, actualización del saldo y registro del movimiento realizado.
+* Impedir montos negativos o iguales a cero.
+* Evitar montos no numéricos mediante `try/except`.
+* Verificación de saldo suficiente antes de permitir un retiro.
 
-Historial básico de movimientos:
-Despliegue enumerado de todos los depósitos y retiros realizados por el usuario.
+### Registro de movimientos:
 
-Aspectos técnicos aplicados:
+Cada operación se almacena en la lista `historial` del usuario activo en formato descriptivo, por ejemplo:
 
-Uso de estructuras if / elif / else para manejar las opciones del menú.
-Manejo de errores con try / except al recibir montos numéricos.
-Variables acumulativas para mantener actualizado el saldo.
-Uso de listas (historial) para almacenar los movimientos del usuario.
-Integración directa con la estructura de datos creada por el integrante 2.
+* `"Depósito: +$50.00"`
+* `"Retiro: -$20.00"`
+
+---
 
 ## Guía de Uso Rápida
 
