@@ -32,6 +32,33 @@ Esta sección implementa el sistema de seguridad y la estructura de datos que pe
 - Cambio de Usuario (Función `cambiar_usuario`): Implementación de la opción para finalizar la sesión actual e iniciar una nueva.
 -Flujo de Control: El menú principal ya no se ejecuta hasta que un usuario ha iniciado sesión con éxito.
 
+---
+
+## Funcionalidad desarrollada por el Integrante 3 (John)
+
+Esta sección corresponde a la implementación de las funciones principales del cajero relacionadas con la gestión del dinero y el saldo del usuario.
+
+### Funcionalidades implementadas:
+
+* **Consultar saldo:** Muestra el saldo actual de la cuenta del usuario activo.
+* **Depositar dinero:** Permite ingresar un monto válido, suma dicho monto al saldo y registra el movimiento en el historial.
+* **Retirar dinero:** Permite retirar un monto válido. El sistema verifica que el usuario tenga fondos suficientes y registra el movimiento en el historial.
+
+### Validaciones aplicadas:
+
+* Impedir montos negativos o iguales a cero.
+* Evitar montos no numéricos mediante `try/except`.
+* Verificación de saldo suficiente antes de permitir un retiro.
+
+### Registro de movimientos:
+
+Cada operación se almacena en la lista `historial` del usuario activo en formato descriptivo, por ejemplo:
+
+* `"Depósito: +$50.00"`
+* `"Retiro: -$20.00"`
+
+---
+
 ## Guía de Uso Rápida
 
 Para iniciar el cajero y probar la autenticación:
@@ -39,16 +66,5 @@ Para iniciar el cajero y probar la autenticación:
 1.  El sistema pedirá un PIN. Ingresa uno de los PINs válidos: `1111`, `2222`, `3333`, `4444`, o `5555`.
 2.  Si fallas el PIN 3 veces, el programa se cerrará automáticamente.
 3.  Una vez dentro del menú, puedes probar la opción 5. Cambiar usuario para volver a la pantalla de login.
-
-###  Nota importante:
-
-Aún **NO** se implementan:
-- Historial de movimientos  
-- Depósitos y retiros  
-- Consulta de saldo  
-
-Estas partes serán añadidas por los integrantes 3 y 4 del proyecto.
-
----
 
 ---
