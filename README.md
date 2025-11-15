@@ -32,6 +32,34 @@ Esta sección implementa el sistema de seguridad y la estructura de datos que pe
 - Cambio de Usuario (Función `cambiar_usuario`): Implementación de la opción para finalizar la sesión actual e iniciar una nueva.
 -Flujo de Control: El menú principal ya no se ejecuta hasta que un usuario ha iniciado sesión con éxito.
 
+---
+
+Funcionalidad desarrollada por el Integrante 3 (John Roa)
+
+Esta sección implementa las operaciones principales del cajero automático, trabajando sobre el usuario actualmente autenticado y actualizando sus datos dentro del sistema.
+
+Estructura implementada:
+
+Consulta de saldo:
+Muestra el saldo actual disponible para el usuario activo.
+
+Depósito de dinero:
+Validación del monto ingresado, actualización del saldo mediante variable acumulativa y registro del movimiento en el historial.
+
+Retiro de dinero:
+Validación del monto, verificación de fondos suficientes, actualización del saldo y registro del movimiento realizado.
+
+Historial básico de movimientos:
+Despliegue enumerado de todos los depósitos y retiros realizados por el usuario.
+
+Aspectos técnicos aplicados:
+
+Uso de estructuras if / elif / else para manejar las opciones del menú.
+Manejo de errores con try / except al recibir montos numéricos.
+Variables acumulativas para mantener actualizado el saldo.
+Uso de listas (historial) para almacenar los movimientos del usuario.
+Integración directa con la estructura de datos creada por el integrante 2.
+
 ## Guía de Uso Rápida
 
 Para iniciar el cajero y probar la autenticación:
@@ -39,16 +67,5 @@ Para iniciar el cajero y probar la autenticación:
 1.  El sistema pedirá un PIN. Ingresa uno de los PINs válidos: `1111`, `2222`, `3333`, `4444`, o `5555`.
 2.  Si fallas el PIN 3 veces, el programa se cerrará automáticamente.
 3.  Una vez dentro del menú, puedes probar la opción 5. Cambiar usuario para volver a la pantalla de login.
-
-###  Nota importante:
-
-Aún **NO** se implementan:
-- Historial de movimientos  
-- Depósitos y retiros  
-- Consulta de saldo  
-
-Estas partes serán añadidas por los integrantes 3 y 4 del proyecto.
-
----
 
 ---
