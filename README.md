@@ -58,7 +58,16 @@ Cada operación se almacena en la lista `historial` del usuario activo en format
 * `"Retiro: -$20.00"`
 
 ---
+## Funcionalidad desarrollada por el Integrante 4 (Jonathan)
 
+En esta seccion corresponde a la implementacion y limpieza de codigo
+
+### Funcionalidades implementadas:
+
+* **Modularizacion:** se crearon multiples modulos segun funcionalidad respetando el principio DRY
+* **Control de ejecucion:** Si el usuario tocaba una opcion mal dentro del bucle
+
+---
 ## Guía de Uso Rápida
 
 Para iniciar el cajero y probar la autenticación:
